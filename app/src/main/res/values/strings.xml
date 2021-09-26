@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Grand Hotel</string>
+    <string name="text_context">Grand caterings offers variety of standared menus to select at affordable price. See below to find a suitable standard menu for your event. We can also assist you with custom menus. Contact us for more details</string>
+    <string name="btn1">See Menu</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Double Rooms</string>
+    <string name="tab_text_2">Triple Rooms</string>
+    <string name="tab_text_3">Quad Rooms</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="room_21">Room 21</string>
+    <string name="room_22">Room 22</string>
+    <string name="room_23">Room 23</string>
+    <string name="price_btn">View Price</string>
+    <string name="triple_room_txt">Triple Rooms</string>
+    <string name="room_31"><![CDATA[Room 31]]></string>
+    <string name="room_32">Room 32</string>
+    <string name="dinner_txt">Quad Rooms</string>
+    <string name="room_41">Room 41</string>
+    <string name="room_42">Room 42</string>
+    <string name="lunch_txt">Lunch Menu</string>
+    <string name="room21_topic">Room 21</string>
+    <string name="room21_text">Consist of king size bed , separate bathroom and garden view. Size 200SQ FT </string>
+    <string name="room_price_txt">price per night </string>
+    <string name="room21_price">Rs 20000</string>
+    <string name="NoofNights">Enter the Number of Nights to Booking</string>
+    <string name="back_btn">Back</string>
+    <string name="room22_txt">Consist of king size bed , separate bathroom and garden view. Size 200SQ FT</string>
+    <string name="room22_topic">Room 22</string>
+    <string name="room22_price">Rs 20000</string>
+    <string name="room23_topic">Room 23</string>
+    <string name="room23_txt">Consist of king size bed , separate bathroom and garden view. Size 200SQ FT</string>
+    <string name="room23_price">Rs 20000</string>
+    <string name="room31_topic"><![CDATA[Room 31]]></string>
+    <string name="room31_text">Consist of king size bed + single , separate bathroom and garden view. Size 200SQ FT</string>
+    <string name="room31_price">Rs 23000</string>
+    <string name="room32_topic">Room 32</string>
+    <string name="room32_text">Consist of king size bed + single , separate bathroom and garden view. Size 200SQ FT</string>
+    <string name="room32_price">Rs 23000</string>
+    <string name="room41_topic">room41</string>
+    <string name="room41_text">Consist of two king size bed, separate bathroom and garden view. Size 250SQ FT</string>
+    <string name="room41_price">Rs28000</string>
+    <string name="noodles_topic">Room 42</string>
+    <string name="room42_text">Consist of two king size bed, separate bathroom and garden view. Size 250SQ FT</string>
+    <string name="room42_price">Rs28000</string>
+    <string name="Topic">Grand Room Booking</string>
+    <string name="et_date">Enter the Date</string>
+    <string name="et_email">Enter the Email</string>
+    <string name="confirm_btn">Confirm Oder</string>
+    <string name="txtroom21">Room 21 (Double)</string>
+    <string name="txtroom22">Room 22 (Double)</string>
+
+    <string name="txtroom23">Room 23 (Double)</string>
+    <string name="txtroom31">Room 31 (Triple)</string>
+    <string name="txtroom32pers">Room 32 (Triple)</string>
+    <string name="txtroom41">Room 41 (Quad)</string>
+    <string name="txtroom42">Room 42 (Quad)</string>
+    <string name="booking_btn">Add to Cart</string>
+    <string name="clear_btn">Clear</string>
+    <string name="view_btn">View Oder</string>
+    <string name="Delete_btn">Delete Oder</string>
+    <string name="Update_btn">Update Oder</string>
+    <string name="btn_bill">Bill Amount</string>
+    <string name="billLable">TotalBill Amount   </string>
+    <string name="rupeeLable">Rs.</string>
+
+</resources>

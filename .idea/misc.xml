@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_dinner1.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_dinner3.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_main2.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_main3.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_main4.xml" value="0.36666666666666664" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_21.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_22.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_23.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_31.xml" value="0.2957427536231884" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_32.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_41.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/activity_room_42.xml" value="0.20520833333333333" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/fragment_1.xml" value="0.2957427536231884" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/fragment_2.xml" value="0.36666666666666664" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/fragment_3.xml" value="0.36666666666666664" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/fragment_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/GrandHotel2/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/drawable/btn_style.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/drawable/customer_input.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_dinner1.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_dinner2.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_dinner3.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_lunch2.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_lunch3.xml" value="0.152" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_lunch4.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_main2.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_main3.xml" value="0.14628623188405798" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_main4.xml" value="0.264" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_room_31.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/activity_room_32.xml" value="0.264" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/fragment_1.xml" value="0.264" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/fragment_2.xml" value="0.2" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/fragment_3.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/fragment_main.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/Sugandhi/Desktop/GrandHotel2/app/src/main/res/layout/toolbar.xml" value="0.1526268115942029" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
