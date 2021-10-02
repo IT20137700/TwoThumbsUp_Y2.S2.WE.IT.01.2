@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@drawable/img1">
+
+    <EditText
+        android:id="@+id/Ju2"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/Ju4"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/Ju4"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/txtNoodles"
+        app:layout_constraintTop_toBottomOf="@+id/Bu3"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/Bu3"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Bu2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/Ju3"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/back_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/Ju2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/Bu2"
+        android:layout_width="52dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/txtStringhoppers"
+        app:layout_constraintTop_toBottomOf="@+id/Bu1"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        android:background="#A112E3" />
+
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/customer_input"
+
+        android:ems="10"
+        android:fontFamily="@font/aclonica"
+        android:hint="Enter Table No"
+        android:inputType="date"
+        android:textColor="@color/black"
+        android:textColorHint="#5F066E"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="338dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/customer_input"
+
+        android:ems="10"
+        android:fontFamily="@font/aclonica"
+        android:hint="Enter Your Name"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#6A047C"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/aclonica"
+        android:text="Confirm Order"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:backgroundTint="#A112E3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_number"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/view_btn"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="291dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/view_btn"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:backgroundTint="#A112E3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_number"
+        tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/Update_btn"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/Update_btn"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:backgroundTint="#A112E3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_number"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/Delete_btn"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/Delete_btn"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:backgroundTint="#A112E3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_number"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="84dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_style"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/back_btn"
+        app:backgroundTint="#A112E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_style"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/clear_btn"
+        app:backgroundTint="#A112E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFriedRice"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:text="peporoni Pizza"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_btn" />
+
+    <TextView
+        android:id="@+id/txtBiriyani"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:text="Cheese Pizza"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Pi2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNasigorang"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/Nasigoran_topic"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Pi3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRedrice"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="28dp"
+        android:text="Chicken Burger"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Bu1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtStringhoppers"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:text="Cheese Burger"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Bu2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNoodles"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:text="Mango Juice"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Ju4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Pi1"
+        android:layout_width="52dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtFriedRice"
+        app:layout_constraintStart_toEndOf="@+id/txtFriedRice"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/Pi2"
+        android:layout_width="52dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/txtBiriyani"
+        app:layout_constraintTop_toBottomOf="@+id/Pi1"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/Pi3"
+        android:layout_width="52dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/txtNasigorang"
+        app:layout_constraintTop_toBottomOf="@+id/Pi2"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/Bu1"
+        android:layout_width="52dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/txtRedrice"
+        app:layout_constraintTop_toBottomOf="@+id/Pi3"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_bill"
+        android:layout_width="62dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#151515"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clear_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/billLable"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/billLable"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/rupeeLable"
+        android:layout_width="35dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/rupeeLable"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/billLable" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="180dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="32dp"
+        android:text="Avacado Juice"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Ju2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:text="strawbery Juice"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Ju3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="12dp"
+        android:text="DonutBurger"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Bu3"
+        app:layout_constraintEnd_toStartOf="@+id/Bu3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
