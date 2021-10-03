@@ -45,7 +45,7 @@ public class MainActivity4 extends AppCompatActivity {
     EditText et_number;
 
 
-    DatabaseReference db;
+    DatabaseReference db1;
     String Piz1;
     String Piz2;
     String Piz3;
@@ -191,7 +191,7 @@ public class MainActivity4 extends AppCompatActivity {
         Delete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //DeleteData();
+                DeleteData();
             }
         });
 
@@ -199,7 +199,7 @@ public class MainActivity4 extends AppCompatActivity {
         view_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //ViewData();
+                ViewData();
             }
         });
 
@@ -207,7 +207,7 @@ public class MainActivity4 extends AppCompatActivity {
         Update_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //UpdateData();
+                UpdateData();
             }
         });
 
@@ -226,57 +226,57 @@ public class MainActivity4 extends AppCompatActivity {
 
     public void ClearControll() {
 
-        SharedPreferences sp1 = getApplicationContext().getSharedPreferences("Pizza1", Context.MODE_PRIVATE);
+        SharedPreferences sp1 = getApplicationContext().getSharedPreferences("pizza1", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed1 = sp1.edit();
-        ed1.remove("");
+        ed1.remove("peporoPizza");
         ed1.apply();
-        Pi1.setText(" ");
+        Pi1.setText("");
 
-        SharedPreferences sp2 = getApplicationContext().getSharedPreferences("Pizza2", Context.MODE_PRIVATE);
+        SharedPreferences sp2 = getApplicationContext().getSharedPreferences("pizza2", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed2 = sp2.edit();
-        ed2.remove("");
+        ed2.remove("cheesepizza");
         ed2.apply();
         Pi2.setText("");
 
-        SharedPreferences sp3 = getApplicationContext().getSharedPreferences("Pizza3", Context.MODE_PRIVATE);
+        SharedPreferences sp3 = getApplicationContext().getSharedPreferences("pizza3", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed3 = sp3.edit();
-        ed3.remove("");
+        ed3.remove("VegPizza");
         ed3.apply();
         Pi3.setText("");
 
         SharedPreferences sp4 = getApplicationContext().getSharedPreferences("burger1", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed4 = sp4.edit();
-        ed4.remove("");
+        ed4.remove("BurgerNo1");
         ed4.apply();
         Bu1.setText("");
 
         SharedPreferences sp5 = getApplicationContext().getSharedPreferences("burger2", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed5 = sp5.edit();
-        ed5.remove("");
+        ed5.remove("cheeseNo");
         ed5.apply();
         Bu2.setText("");
 
         SharedPreferences sp6 = getApplicationContext().getSharedPreferences("burger3", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed6 = sp6.edit();
-        ed6.remove("");
+        ed6.remove("DburgerNo");
         ed6.apply();
         Bu3.setText("");
 
         SharedPreferences sp7 = getApplicationContext().getSharedPreferences("Juice1", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed7 = sp7.edit();
-        ed7.remove("");
+        ed7.remove("MangoNo");
         ed7.apply();
         Ju4.setText("");
 
         SharedPreferences sp8 = getApplicationContext().getSharedPreferences("Juice2", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed8 = sp8.edit();
-        ed8.remove("");
+        ed8.remove("AvacadoNo");
         ed8.apply();
         Ju2.setText("");
 
         SharedPreferences sp9 = getApplicationContext().getSharedPreferences("Juice3", Context.MODE_PRIVATE);
         SharedPreferences.Editor ed9 = sp9.edit();
-        ed9.remove("");
+        ed9.remove("stawberyNo");
         ed9.apply();
         Ju3.setText("");
 
@@ -289,30 +289,30 @@ public class MainActivity4 extends AppCompatActivity {
 
     //insert
     public void Save() {
-        db = FirebaseDatabase.getInstance().getReference().child("FoodOder");
+        db1 = FirebaseDatabase.getInstance().getReference().child("FoodOder");
 
 
         try {
             if (TextUtils.isEmpty(et_name.getText().toString().trim())) {
-                Toast.makeText(getApplicationContext(), "Enter the Event Date ", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Enter the Table Name", Toast.LENGTH_LONG).show();
             } else if (TextUtils.isEmpty((et_number.getText().toString().trim()))) {
-                Toast.makeText(getApplicationContext(), "Enter the Email address", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Enter Your Name ", Toast.LENGTH_LONG).show();
             } else {
-                obFOder.setNumber(et_name.getText().toString().trim());
-                obFOder.setName(et_number.getText().toString().trim());
+                obFOder.setEt_number(et_name.getText().toString().trim());
+                obFOder.setEt_name(et_number.getText().toString().trim());
 
-                obFOder.setPeporoniPizza(Pi1.getText().toString().trim());
-                obFOder.setCheesePizza(Pi2.getText().toString().trim());
-                obFOder.setCheesePizza(Pi3.getText().toString().trim());
-                obFOder.setChickenBurger(Bu1.getText().toString().trim());
-                obFOder.setCheseseBurger(Bu2.getText().toString().trim());
-                obFOder.setDonutBurger(Bu3.getText().toString().trim());
-                obFOder.setMangoJuice(Ju4.getText().toString().trim());
-                obFOder.setMangoJuice(Ju2.getText().toString().trim());
-                obFOder.setMangoJuice(Ju3.getText().toString().trim());
+                obFOder.setPi1(Pi1.getText().toString().trim());
+                obFOder.setPi2(Pi2.getText().toString().trim());
+                obFOder.setPi3(Pi3.getText().toString().trim());
+                obFOder.setBu1(Bu1.getText().toString().trim());
+                obFOder.setBu2(Bu2.getText().toString().trim());
+                obFOder.setBu3(Bu3.getText().toString().trim());
+                obFOder.setJu4(Ju4.getText().toString().trim());
+                obFOder.setJu2(Ju2.getText().toString().trim());
+                obFOder.setJu3(Ju3.getText().toString().trim());
 
-                //db.push().setValue(obFOder);
-                db.child("Foder1").setValue(obFOder);
+
+                db1.child("Foder1").setValue(obFOder);
                 Toast.makeText(getApplicationContext(), "Confirm oder successfully", Toast.LENGTH_LONG).show();
                 ClearControll();
             }
@@ -324,24 +324,25 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
   public void ViewData(){
-        db = FirebaseDatabase.getInstance().getReference().child("FoodOder").child("oder1");
+        db1 = FirebaseDatabase.getInstance().getReference().child("FoodOder").child("Foder1");
         try {
-            db.addListenerForSingleValueEvent(new ValueEventListener() {
+            db1.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.hasChildren()) {
-                        et_name.setText(dataSnapshot.child("date").getValue().toString());
-                        et_number.setText(dataSnapshot.child("email").getValue().toString());
+                        et_name.setText(dataSnapshot.child("et_name").getValue().toString());
+                        et_number.setText(dataSnapshot.child("et_number").getValue().toString());
 
-                        Pi2.setText(dataSnapshot.child("Pi1").getValue().toString());
-                        Pi3.setText(dataSnapshot.child("Pi2").getValue().toString());
-                        Pi1.setText(dataSnapshot.child("Pi3").getValue().toString());
-                        Bu2.setText(dataSnapshot.child("Bu1").getValue().toString());
-                        Bu1.setText(dataSnapshot.child("Bu2").getValue().toString());
-                        Bu3.setText(dataSnapshot.child("Bu3").getValue().toString());
-                        Ju4.setText(dataSnapshot.child("Ju4").getValue().toString());
-                        Ju3.setText(dataSnapshot.child("Ju4").getValue().toString());
-                        Ju2.setText(dataSnapshot.child("Ju4").getValue().toString());
+                        Pi1.setText(dataSnapshot.child("pi1").getValue().toString());
+                        Pi2.setText(dataSnapshot.child("pi2").getValue().toString());
+                        Pi3.setText(dataSnapshot.child("pi3").getValue().toString());
+                        Bu1.setText(dataSnapshot.child("bu1").getValue().toString());
+                        Bu2.setText(dataSnapshot.child("bu2").getValue().toString());
+                        Bu3.setText(dataSnapshot.child("bu3").getValue().toString());
+                        Ju4.setText(dataSnapshot.child("ju4").getValue().toString());
+                        Ju2.setText(dataSnapshot.child("ju2").getValue().toString());
+                        Ju3.setText(dataSnapshot.child("ju3").getValue().toString());
+
 
                     } else
                         Toast.makeText(getApplicationContext(), " No Source To Display!", Toast.LENGTH_SHORT).show();
@@ -360,13 +361,13 @@ public class MainActivity4 extends AppCompatActivity {
 
     //delete data from Firebase Database
     public void DeleteData () {
-        db = FirebaseDatabase.getInstance().getReference().child("FoodOder");
-        db.addListenerForSingleValueEvent(new ValueEventListener() {
+        db1 = FirebaseDatabase.getInstance().getReference().child("FoodOder");
+        db1.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChild("oder1")) {
-                    db = FirebaseDatabase.getInstance().getReference().child("FoodOder").child("oder1");
-                    db.removeValue();
+                if (dataSnapshot.hasChild("Foder1")) {
+                    db1 = FirebaseDatabase.getInstance().getReference().child("FoodOder").child("Foder1");
+                    db1.removeValue();
                     ClearControll();
 
                     Toast.makeText(getApplicationContext(), "Data Deleted Successfully!", Toast.LENGTH_SHORT).show();
@@ -389,26 +390,26 @@ public class MainActivity4 extends AppCompatActivity {
 
     //update data in the Firebase database
     public void UpdateData () {
-        db = FirebaseDatabase.getInstance().getReference().child("FoodOder");
-        db.addListenerForSingleValueEvent(new ValueEventListener() {
+        db1 = FirebaseDatabase.getInstance().getReference().child("FoodOder");
+        db1.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChild("oder1")) {
+                if (dataSnapshot.hasChild("Foder1")) {
                     try {
-                        obFOder.setName(et_name.getText().toString().trim());
-                        obFOder.setNumber(et_number.getText().toString().trim());
-                        obFOder.setPeporoniPizza(Pi1.getText().toString().trim());
-                        obFOder.setCheesePizza(Pi2.getText().toString().trim());
-                        obFOder.setVegPizza(Pi3.getText().toString().trim());
-                        obFOder.setChickenBurger(Bu1.getText().toString().trim());
-                        obFOder.setCheseseBurger(Bu2.getText().toString().trim());
-                        obFOder.setDonutBurger(Bu3.getText().toString().trim());
-                        obFOder.setMangoJuice(Ju4.getText().toString().trim());
-                        obFOder.setMangoJuice(Ju3.getText().toString().trim());
-                        obFOder.setMangoJuice(Ju2.getText().toString().trim());
+                        obFOder.setEt_name(et_name.getText().toString().trim());
+                        obFOder.setEt_number(et_number.getText().toString().trim());
+                        obFOder.setPi1(Pi1.getText().toString().trim());
+                        obFOder.setPi2(Pi2.getText().toString().trim());
+                        obFOder.setPi3(Pi3.getText().toString().trim());
+                        obFOder.setBu1(Bu1.getText().toString().trim());
+                        obFOder.setBu2(Bu2.getText().toString().trim());
+                        obFOder.setBu3(Bu3.getText().toString().trim());
+                        obFOder.setJu4(Ju4.getText().toString().trim());
+                        obFOder.setJu2(Ju3.getText().toString().trim());
+                        obFOder.setJu3(Ju2.getText().toString().trim());
 
-                        db = FirebaseDatabase.getInstance().getReference().child("FoodOder").child("oder1");
-                        db.setValue(obFOder);
+                        db1 = FirebaseDatabase.getInstance().getReference().child("FoodOder").child("Foder1");
+                        db1.setValue(obFOder);
                         ClearControll();
 
                         Toast.makeText(getApplicationContext(), "Data updated Successfully!", Toast.LENGTH_SHORT).show();

@@ -2,106 +2,106 @@ package com.example.grandhotel;
 
 public class FoodOrder {
 
-    private String PeporoniPizza;
-    private String CheesePizza;
-    private String VegPizza;
-    private String ChickenBurger;
-    private String CheseseBurger;
-    private String DonutBurger;
-    private String MangoJuice;
-    private String Avacado;
-    private String StrawberyDrink;
-    private String Name;
-    private String Number;
+    private String Pi1;
+    private String Pi2;
+    private String Pi3;
+    private String Bu1;
+    private String Bu2;
+    private String Bu3;
+    private String Ju4;
+    private String Ju2;
+    private String Ju3;
+    private String et_name;
+    private String et_number;
 
     public FoodOrder() {
     }
 
-    public void setPeporoniPizza(String peporoniPizza) {
-        PeporoniPizza = peporoniPizza;
+    public String getPi1() {
+        return Pi1;
     }
 
-    public void setCheesePizza(String cheesePizza) {
-        CheesePizza = cheesePizza;
+    public void setPi1(String pi1) {
+        Pi1 = pi1;
     }
 
-    public void setVegPizza(String vegPizza) {
-        VegPizza = vegPizza;
+    public String getPi2() {
+        return Pi2;
     }
 
-    public void setChickenBurger(String chickenBurger) {
-        ChickenBurger = chickenBurger;
+    public void setPi2(String pi2) {
+        Pi2 = pi2;
     }
 
-    public void setCheseseBurger(String cheseseBurger) {
-        CheseseBurger = cheseseBurger;
+    public String getPi3() {
+        return Pi3;
     }
 
-    public void setDonutBurger(String donutBurger) {
-        DonutBurger = donutBurger;
+    public void setPi3(String pi3) {
+        Pi3 = pi3;
     }
 
-    public void setMangoJuice(String mangoJuice) {
-        MangoJuice = mangoJuice;
+    public String getBu1() {
+        return Bu1;
     }
 
-    public void setAvacado(String avacado) {
-        Avacado = avacado;
+    public void setBu1(String bu1) {
+        Bu1 = bu1;
     }
 
-    public void setStrawberyDrink(String strawberyDrink) {
-        StrawberyDrink = strawberyDrink;
+    public String getBu2() {
+        return Bu2;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setBu2(String bu2) {
+        Bu2 = bu2;
     }
 
-    public void setNumber(String number) {
-        Number = number;
+    public String getBu3() {
+        return Bu3;
     }
 
-    public String getPeporoniPizza() {
-        return PeporoniPizza;
+    public void setBu3(String bu3) {
+        Bu3 = bu3;
     }
 
-    public String getCheesePizza() {
-        return CheesePizza;
+    public String getJu4() {
+        return Ju4;
     }
 
-    public String getVegPizza() {
-        return VegPizza;
+    public void setJu4(String ju4) {
+        Ju4 = ju4;
     }
 
-    public String getChickenBurger() {
-        return ChickenBurger;
+    public String getJu2() {
+        return Ju2;
     }
 
-    public String getCheseseBurger() {
-        return CheseseBurger;
+    public void setJu2(String ju2) {
+        Ju2 = ju2;
     }
 
-    public String getDonutBurger() {
-        return DonutBurger;
+    public String getJu3() {
+        return Ju3;
     }
 
-    public String getMangoJuice() {
-        return MangoJuice;
+    public void setJu3(String ju3) {
+        Ju3 = ju3;
     }
 
-    public String getAvacado() {
-        return Avacado;
+    public String getEt_name() {
+        return et_name;
     }
 
-    public String getStrawberyDrink() {
-        return StrawberyDrink;
+    public void setEt_name(String et_name) {
+        this.et_name = et_name;
     }
 
-    public String getName() {
-        return Name;
+    public String getEt_number() {
+        return et_number;
     }
 
-    public String getNumber() {
-        return Number;
+    public void setEt_number(String et_number) {
+        this.et_number = et_number;
     }
 }
