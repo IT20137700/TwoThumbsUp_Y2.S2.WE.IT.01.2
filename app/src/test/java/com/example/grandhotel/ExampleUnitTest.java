@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
 
     private  MainActivity4 cateringbill;
+
     public void setup(){
         cateringbill=new MainActivity4();
     }

@@ -2,26 +2,34 @@ package com.example.grandhotel;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity4 extends AppCompatActivity {
+import java.text.DateFormat;
+import java.util.Calendar;
+
+public class MainActivity4 extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     EditText noNasigorang;
     EditText Nobiriyani;
     EditText noFriedrice;
@@ -35,6 +43,7 @@ public class MainActivity4 extends AppCompatActivity {
     Button view_btn;
     Button Update_btn;
     Button Delete_btn;
+    FloatingActionButton date_button;
 
 
     EditText et_date;
@@ -80,7 +89,7 @@ public class MainActivity4 extends AppCompatActivity {
 
 
 
-       // fetch number of plates in the cart
+        // fetch number of plates in the cart
         Nobiriyani=findViewById(R.id.Nobiriyani);
         SharedPreferences sp =getApplicationContext().getSharedPreferences("lunch3", Context.MODE_PRIVATE);
         Biriyani =sp.getString("biriyaniNo","");
@@ -162,7 +171,7 @@ public class MainActivity4 extends AppCompatActivity {
         });
 
 
-        back_btn=(Button) findViewById(R.id.back_btn);
+        back_btn=(Button) findViewById(R.id.sign_up_btn);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -203,13 +212,30 @@ public class MainActivity4 extends AppCompatActivity {
         });
 
 
-
+        date_button=findViewById(R.id.date_button);
+        date_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogFragment datepicker= new DatePickerFragment();
+                datepicker.show(getSupportFragmentManager(),"date picker");
+            }
+        });
 
 
 
 
     }
 
+
+    @Override
+    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+        Calendar c =Calendar.getInstance();
+        c.set(Calendar.YEAR,year);
+        c.set(Calendar.MONTH,month);
+        c.set(Calendar.DATE,dayOfMonth);
+        String currentDateString= DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
+        et_date.setText(currentDateString);
+    }
 
     public void openfragment1(){
 
@@ -273,13 +299,15 @@ public class MainActivity4 extends AppCompatActivity {
     //insert
     public void  Save () {
         db = FirebaseDatabase.getInstance().getReference().child("Oder");
-
+        //String email= et_email.getText().toString();
 
         try {
             if (TextUtils.isEmpty(et_date.getText().toString().trim())) {
                 Toast.makeText(getApplicationContext(), "Enter the Event Date ", Toast.LENGTH_LONG).show();
             } else if (TextUtils.isEmpty((et_email.getText().toString().trim()))) {
                 Toast.makeText(getApplicationContext(), "Enter the Email address", Toast.LENGTH_LONG).show();
+            }else if(!Patterns.EMAIL_ADDRESS.matcher(  et_email.getText().toString()).matches()){
+                et_email.setError("Pleas Enter Correct Email");
             } else {
                 obOder.setDate(et_date.getText().toString().trim());
                 obOder.setEmail(et_email.getText().toString().trim());
@@ -304,36 +332,36 @@ public class MainActivity4 extends AppCompatActivity {
 
     }
 
-  //view
-     public void ViewData(){
+    //view
+    public void ViewData(){
         db = FirebaseDatabase.getInstance().getReference().child("Oder").child("oder1");
         try {
-             db.addListenerForSingleValueEvent(new ValueEventListener() {
-                 @Override
-                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                     if (dataSnapshot.hasChildren()) {
-                         et_date.setText(dataSnapshot.child("date").getValue().toString());
-                         et_email.setText(dataSnapshot.child("email").getValue().toString());
-                         Nobiriyani.setText(dataSnapshot.child("nobiriyani").getValue().toString());
-                         noFriedrice.setText(dataSnapshot.child("noFriedrice").getValue().toString());
-                         noNasigorang.setText(dataSnapshot.child("noNasigorang").getValue().toString());
-                         noRedRice.setText(dataSnapshot.child("noRedRice").getValue().toString());
-                         NoStringhop.setText(dataSnapshot.child("noStringhop").getValue().toString());
-                         noKotthu.setText(dataSnapshot.child("noKotthu").getValue().toString());
-                         NoNoodless.setText(dataSnapshot.child("noNoodless").getValue().toString());
+            db.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChildren()) {
+                        et_date.setText(dataSnapshot.child("date").getValue().toString());
+                        et_email.setText(dataSnapshot.child("email").getValue().toString());
+                        Nobiriyani.setText(dataSnapshot.child("nobiriyani").getValue().toString());
+                        noFriedrice.setText(dataSnapshot.child("noFriedrice").getValue().toString());
+                        noNasigorang.setText(dataSnapshot.child("noNasigorang").getValue().toString());
+                        noRedRice.setText(dataSnapshot.child("noRedRice").getValue().toString());
+                        NoStringhop.setText(dataSnapshot.child("noStringhop").getValue().toString());
+                        noKotthu.setText(dataSnapshot.child("noKotthu").getValue().toString());
+                        NoNoodless.setText(dataSnapshot.child("noNoodless").getValue().toString());
 
-                     } else
-                         Toast.makeText(getApplicationContext(), " No Source To Display!", Toast.LENGTH_SHORT).show();
-                 }
+                    } else
+                        Toast.makeText(getApplicationContext(), " No Source To Display!", Toast.LENGTH_SHORT).show();
+                }
 
-                 @Override
-                 public void onCancelled(@NonNull DatabaseError databaseError) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                 }
-             });
-         }catch (NumberFormatException e){
-             Toast.makeText(getApplicationContext(), "Number formate Exception", Toast.LENGTH_LONG).show();
-         }
+                }
+            });
+        }catch (NumberFormatException e){
+            Toast.makeText(getApplicationContext(), "Number formate Exception", Toast.LENGTH_LONG).show();
+        }
     }
 
 
@@ -407,13 +435,19 @@ public class MainActivity4 extends AppCompatActivity {
 
 
 
-   protected int Totalbill( int PNumfriedrice, int PNumnasigoreng, int PNumbiriyani, int PNumstringhop, int PNumredrice, int PNumkottu, int PNumnoodles){
+    protected int Totalbill( int PNumfriedrice, int PNumnasigoreng, int PNumbiriyani, int PNumstringhop, int PNumredrice, int PNumkottu, int PNumnoodles){
         return (PNumfriedrice*250)+ (PNumnasigoreng*350)+ (PNumbiriyani*300) +(PNumstringhop*110)+(PNumredrice*120) + (PNumkottu*300)+(PNumnoodles*220);
-   }
+    }
 
 
 
 }
+
+
+
+
+
+
 
 
 

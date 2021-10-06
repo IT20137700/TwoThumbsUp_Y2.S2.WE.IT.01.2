@@ -15,8 +15,8 @@
 
     <EditText
         android:id="@+id/et_date"
-        android:layout_width="335dp"
-        android:layout_height="43dp"
+        android:layout_width="288dp"
+        android:layout_height="42dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/customer_input"
@@ -34,8 +34,8 @@
 
     <EditText
         android:id="@+id/et_email"
-        android:layout_width="338dp"
-        android:layout_height="43dp"
+        android:layout_width="288dp"
+        android:layout_height="45dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/customer_input"
@@ -120,7 +120,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/back_btn"
+        android:id="@+id/sign_up_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="288dp"
@@ -347,6 +347,19 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/billLable"
         app:layout_constraintTop_toBottomOf="@+id/txtNoodles" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="84dp"
+        android:clickable="true"
+        app:backgroundTint="@color/purple_200"
+        app:layout_constraintStart_toEndOf="@+id/et_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_date_range_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

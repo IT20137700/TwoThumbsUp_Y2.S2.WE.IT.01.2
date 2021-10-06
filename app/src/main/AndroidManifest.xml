@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrandHotel">
         <activity
+            android:name=".MainActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".Sign_In"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity4"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -37,14 +45,17 @@
         <activity
             android:name=".Lunch2"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity2"
             android:exported="true"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.GrandHotel.NoActionBar" />
+
+
+
+
         <activity
-            android:name=".MainActivity3"
+            android:name=".First"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
